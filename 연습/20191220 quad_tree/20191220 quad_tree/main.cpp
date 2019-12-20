@@ -12,6 +12,10 @@ int main()
 	root_node->insertNode('c');
 	root_node->insertNode('d');
 	a->insertNode('e');
+	a->insertNode('f');
+	a->insertNode('g');
+	a->insertNode('h');
+
 
 	int v{ 11111 };
 

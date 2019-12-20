@@ -11,14 +11,18 @@ struct SNode
 
 	SNode* insertNode(char data)
 	{
+		//child_count == 각 노드가 갖는 최대의 자식 노드의 갯수(count!)
 		if (child_count == 4) return nullptr;
 
+		//자식 노드의 child_count번 항목에 새로운 노드를 만든다.
 		children[child_count] = new SNode(data);
-
+		//child_count 항목의 노드의 부모는 이 함수를 호출한 부모 노드가 된다.
 		children[child_count]->parent = this;
 
+		//child_count 숫자를 늘려 다음 children 노드를 입력한다.
 		++child_count;
 
+		//이 함수가 리턴하는 SNode == 자식 노드는 ++되기 전에 child_count 번째 항목의 children이다.
 		return children[child_count - 1];
 	}
 
